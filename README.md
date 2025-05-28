@@ -42,6 +42,14 @@ CTAButton(title: "Confirm") {
     // Action code
 }.asPrimaryButton()
 ```
+live demo (taken from preview available in CTAButtons.swift)
+
+
+
+
+https://github.com/user-attachments/assets/c66b3de4-ba0d-435e-8fe3-8568e54381d1
+
+
 
 
 
@@ -78,6 +86,11 @@ IconButton(icon: .preset(.speakerIconOn)) {
 
 Some other applications using some variation of the icon and buttons include dynamic image switching
 
+
+https://github.com/user-attachments/assets/3e49e5d3-3b96-49f0-8ddb-69515f909c59
+
+
+
 **DeviceActuatorView**
 
 DeviceActuatorView is a flexible, state-driven UI module that adapts its layout and visual density based on the CellSize configuration. It's ideal for dashboards, device control surfaces, or any scenario where responsiveness and modularity are key.
@@ -103,6 +116,34 @@ DeviceActuatorView(size: .medium, device: myDevice)
            height: CellSize.medium.frameSize.height)
 ```
 
-live demo
+live demo (taken from preview available in DeviceActuatorView.swift)
+
+
+https://github.com/user-attachments/assets/6753ea06-e86b-4975-98b1-5a9fe4a571fa
+
+
+
 
 This component showcases how to build high-quality, stateful, and visually adaptive SwiftUI views that support composition, style inheritance, and scalable interaction design.
+
+For example, these are some other applications where the components like ctabuttons and iconimage variations modularly compose cells using DeviceActuator view for different purposes,
+like adding a toggle to activate resizing or injecting a different color depending on state of the component.
+
+
+
+https://github.com/user-attachments/assets/2d879f5c-157c-4a7a-bf67-dda4c44034a6
+
+Here are other examples of using the base components and updating the imageicon to reflect lottie animations:
+
+
+
+https://github.com/user-attachments/assets/cd07aaa5-e7d0-4438-ac16-fb81f439813d
+
+
+
+
+https://github.com/user-attachments/assets/e3115480-b9cf-4c4c-ac1a-a27dd7fe2e55
+
+
+
+
