@@ -389,6 +389,7 @@ struct DeviceActuatorView: View {
 @available(iOS 14.0, *)
 struct DeviceActuatorInteractivePreview: View {
     @State private var size: CellSize = .small
+    @StateObject var themeManager = ThemeManager()
     @StateObject private var device = DeviceGridCellData(
         id: "preview",
         name: "Preview Device",
@@ -403,22 +404,23 @@ struct DeviceActuatorInteractivePreview: View {
             Color.gray.opacity(0.2)
             VStack(spacing: 16) {
                 DeviceActuatorView(size: size, device: device)
-                    .environmentObject(ThemeManager())
                     .frame(width: size.frameSize.width,
                            height: size.frameSize.height)
                     .animation(.easeInOut(duration: 0.5), value: size)
                 
                 if #available(iOS 15.0, *) {
-                    Button("Next Size: \(size)") {
-                        // cycle through sizes
-                        size = size.nextSize
+                    CTAButton(title: "Next Size: \(size.nextSize)") {
+                        
+                            size = size.nextSize
                     }
-                    .buttonStyle(.borderedProminent)
+                    .asPrimaryButton()
+                    .animation(.easeInOut(duration: 0.5), value: size)
                 } else {
                 }
             }
             .padding()
         }
+        .environmentObject(themeManager)
     }
 }
 
